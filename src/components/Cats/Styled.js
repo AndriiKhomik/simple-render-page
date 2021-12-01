@@ -12,6 +12,7 @@ export const StyledList = styled.ul`
   grid-template-columns: repeat(auto-fill, 290px);
   justify-content: space-around;
   row-gap: 3vh;
+  column-gap: 3vh;
 `;
 
 export const StyledLi = styled.li`
