@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCats } from "../api/catRequest";
+import { getCats } from "../../api/catRequest";
 import AppFilter from "../AppSearch/AppSearch";
 import Cats from "../Cats/Cats";
 import { Container, StyledTitle } from "./Styled.js";
