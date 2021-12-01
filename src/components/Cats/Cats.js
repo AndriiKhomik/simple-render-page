@@ -1,5 +1,5 @@
 import CatItem from "../CatItem/CatItem";
-import { GridContainer, StyledLi } from "./Styled";
+import { GridContainer, StyledLi, StyledList } from "./Styled";
 
 const Cats = ({ cats }) => {
   let id = 4;
@@ -14,7 +14,7 @@ const Cats = ({ cats }) => {
 
   return (
     <GridContainer>
-      <ul>{catsList}</ul>
+      <StyledList>{catsList}</StyledList>
     </GridContainer>
   );
 };

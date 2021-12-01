@@ -39,7 +39,6 @@ function App() {
       <AppFilter onUpdateSearch={onUpdateSearch} />
       {loading && <h4>Loading data...</h4>}
       <Cats cats={visibleData} />
-      <StyledTitle>Cat Fact App</StyledTitle>
     </Container>
   );
 }

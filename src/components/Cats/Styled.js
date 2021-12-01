@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const GridContainer = styled.div`
   margin: 0;
-  ul {
-    padding: 0;
-    padding-bottom: 200px;s
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 290px);
-    justify-content: space-around;
-    gap: 2%;
-    list-style: none;
-  }
+`;
+
+export const StyledList = styled.ul`
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 290px);
+  justify-content: space-around;
+  row-gap: 3vh;
 `;
 
 export const StyledLi = styled.li`
