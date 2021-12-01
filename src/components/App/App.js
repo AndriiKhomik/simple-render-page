@@ -7,27 +7,28 @@ import "./Styled.js";
 
 function App() {
   const [cats, setCats] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [term, setTerm] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getCats()
-      .then((data) => {
-        setCats(data);
-      })
-      .finally(setLoading(false));
+    getCats().then((data) => {
+      setCats(data);
+      setLoading(false);
+    });
   }, []);
 
   const onSearchCat = (items, term) => {
     if (items.length === 0) {
       return items;
     }
-    const findCat = items.filter((cat) => cat.country.toLowerCase().indexOf(term.toLowerCase()) > -1);
+    const findCat = items.filter(
+      (cat) => cat.country.toLowerCase().indexOf(term.toLowerCase()) > -1
+    );
     return findCat;
   };
 
   const onUpdateSearch = (term) => {
-    setTerm(term)
+    setTerm(term);
   };
 
   const visibleData = onSearchCat(cats, term);
@@ -36,7 +37,8 @@ function App() {
     <Container>
       <StyledTitle>Welcome to Cat Fact App</StyledTitle>
       <AppFilter onUpdateSearch={onUpdateSearch} />
-      {loading ? <h4>Loading data...</h4> : <Cats cats={visibleData} />}
+      {loading && <h4>Loading data...</h4>}
+      <Cats cats={visibleData} />
       <StyledTitle>Cat Fact App</StyledTitle>
     </Container>
   );
